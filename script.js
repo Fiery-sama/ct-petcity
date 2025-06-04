@@ -48,12 +48,111 @@ window.addEventListener("resize", function () {
 
 function files(index) {
   var data = `
-    // paste all images here!!
- `;
+    hero-imgs/ezgif-frame-001.jpg
+    hero-imgs/ezgif-frame-002.jpg
+    hero-imgs/ezgif-frame-003.jpg
+    hero-imgs/ezgif-frame-004.jpg
+    hero-imgs/ezgif-frame-005.jpg
+    hero-imgs/ezgif-frame-006.jpg
+    hero-imgs/ezgif-frame-007.jpg
+    hero-imgs/ezgif-frame-008.jpg
+    hero-imgs/ezgif-frame-009.jpg
+    hero-imgs/ezgif-frame-010.jpg
+    hero-imgs/ezgif-frame-011.jpg
+    hero-imgs/ezgif-frame-012.jpg
+    hero-imgs/ezgif-frame-013.jpg
+    hero-imgs/ezgif-frame-014.jpg
+    hero-imgs/ezgif-frame-015.jpg
+    hero-imgs/ezgif-frame-016.jpg
+    hero-imgs/ezgif-frame-017.jpg
+    hero-imgs/ezgif-frame-018.jpg
+    hero-imgs/ezgif-frame-019.jpg
+    hero-imgs/ezgif-frame-020.jpg
+    hero-imgs/ezgif-frame-021.jpg
+    hero-imgs/ezgif-frame-022.jpg
+    hero-imgs/ezgif-frame-023.jpg
+    hero-imgs/ezgif-frame-024.jpg
+    hero-imgs/ezgif-frame-025.jpg
+    hero-imgs/ezgif-frame-026.jpg
+    hero-imgs/ezgif-frame-027.jpg
+    hero-imgs/ezgif-frame-028.jpg
+    hero-imgs/ezgif-frame-029.jpg
+    hero-imgs/ezgif-frame-030.jpg
+    hero-imgs/ezgif-frame-031.jpg
+    hero-imgs/ezgif-frame-032.jpg
+    hero-imgs/ezgif-frame-033.jpg
+    hero-imgs/ezgif-frame-034.jpg
+    hero-imgs/ezgif-frame-035.jpg
+    hero-imgs/ezgif-frame-036.jpg
+    hero-imgs/ezgif-frame-037.jpg
+    hero-imgs/ezgif-frame-038.jpg
+    hero-imgs/ezgif-frame-039.jpg
+    hero-imgs/ezgif-frame-040.jpg
+    hero-imgs/ezgif-frame-041.jpg
+    hero-imgs/ezgif-frame-042.jpg
+    hero-imgs/ezgif-frame-043.jpg
+    hero-imgs/ezgif-frame-044.jpg
+    hero-imgs/ezgif-frame-045.jpg
+    hero-imgs/ezgif-frame-046.jpg
+    hero-imgs/ezgif-frame-047.jpg
+    hero-imgs/ezgif-frame-048.jpg
+    hero-imgs/ezgif-frame-049.jpg
+    hero-imgs/ezgif-frame-050.jpg
+    hero-imgs/ezgif-frame-051.jpg
+    hero-imgs/ezgif-frame-052.jpg
+    hero-imgs/ezgif-frame-053.jpg
+    hero-imgs/ezgif-frame-054.jpg
+    hero-imgs/ezgif-frame-055.jpg
+    hero-imgs/ezgif-frame-056.jpg
+    hero-imgs/ezgif-frame-057.jpg
+    hero-imgs/ezgif-frame-058.jpg
+    hero-imgs/ezgif-frame-059.jpg
+    hero-imgs/ezgif-frame-060.jpg
+    hero-imgs/ezgif-frame-061.jpg
+    hero-imgs/ezgif-frame-062.jpg
+    hero-imgs/ezgif-frame-063.jpg
+    hero-imgs/ezgif-frame-064.jpg
+    hero-imgs/ezgif-frame-065.jpg
+    hero-imgs/ezgif-frame-066.jpg
+    hero-imgs/ezgif-frame-067.jpg
+    hero-imgs/ezgif-frame-068.jpg
+    hero-imgs/ezgif-frame-069.jpg
+    hero-imgs/ezgif-frame-070.jpg
+    hero-imgs/ezgif-frame-071.jpg
+    hero-imgs/ezgif-frame-072.jpg
+    hero-imgs/ezgif-frame-073.jpg
+    hero-imgs/ezgif-frame-074.jpg
+    hero-imgs/ezgif-frame-075.jpg
+    hero-imgs/ezgif-frame-076.jpg
+    hero-imgs/ezgif-frame-077.jpg
+    hero-imgs/ezgif-frame-078.jpg
+    hero-imgs/ezgif-frame-079.jpg
+    hero-imgs/ezgif-frame-080.jpg
+    hero-imgs/ezgif-frame-081.jpg
+    hero-imgs/ezgif-frame-082.jpg
+    hero-imgs/ezgif-frame-083.jpg
+    hero-imgs/ezgif-frame-084.jpg
+    hero-imgs/ezgif-frame-085.jpg
+    hero-imgs/ezgif-frame-086.jpg
+    hero-imgs/ezgif-frame-087.jpg
+    hero-imgs/ezgif-frame-088.jpg
+    hero-imgs/ezgif-frame-089.jpg
+    hero-imgs/ezgif-frame-090.jpg
+    hero-imgs/ezgif-frame-091.jpg
+    hero-imgs/ezgif-frame-092.jpg
+    hero-imgs/ezgif-frame-093.jpg
+    hero-imgs/ezgif-frame-094.jpg
+    hero-imgs/ezgif-frame-095.jpg
+    hero-imgs/ezgif-frame-096.jpg
+    hero-imgs/ezgif-frame-097.jpg
+    hero-imgs/ezgif-frame-098.jpg
+    hero-imgs/ezgif-frame-099.jpg
+    hero-imgs/ezgif-frame-100.jpg
+    `;
   return data.split("\n")[index];
 }
 
-const frameCount = 300;
+const frameCount = 100;
 
 const images = [];
 const imageSeq = {
@@ -72,7 +171,7 @@ gsap.to(imageSeq, {
   ease: `none`,
   scrollTrigger: {
     scrub: 0.15,
-    trigger: `#page>canvas`,
+    trigger: `#hero>canvas`,
     //   set start end according to preference
     start: `top top`,
     end: `600% top`,
@@ -109,7 +208,7 @@ function scaleImage(img, ctx) {
 }
 ScrollTrigger.create({
 
-  trigger: "// object you want to pin it.",
+  trigger: "#hero>canvas",
   pin: true,
   // markers:true,
   scroller: `#main`,
@@ -117,3 +216,8 @@ ScrollTrigger.create({
   start: `top top`,
   end: `600% top`,
 });
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  };
