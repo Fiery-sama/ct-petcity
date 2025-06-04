@@ -1,23 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CollegeTips | India's Pet Friendly City</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
+
 <body>
-  <div id="main">
-    <div id="page"></div>
-    <div id="page2"></div>
+<div id="nav" class="lexend-600">
+  <img src="https://www.collegetips.in/images/logo.jpg" alt="collegetips" />
+
+  <!-- Hamburger Icon -->
+  <div id="hamburger" onclick="toggleMenu()">☰</div>
+
+  <!-- Center Nav Links -->
+  <div id="center-nav">
+    <a href="#about-us">ABOUT</a>
+    <a href="#stories">STORIES</a>
+    <a href="#contact">CONTACT</a>
   </div>
-  
+
+  <a href="#volunteer"><button>BECOME A VOLUNTEER</button></a>
+</div>
+
+<!-- Dropdown Menu for Mobile -->
+<div id="mobile-menu" class="lexend-600">
+  <a href="#about-us">ABOUT</a>
+  <a href="#stories">STORIES</a>
+  <a href="#contact">CONTACT</a>
+  <a href="#volunteer"><button>BECOME A VOLUNTEER</button></a>
+</div>
+  <div id="main">
+    <div id="hero">
+      <h1>Making Cities<br>✨🐱 Paw-some! 🐶✨</h1>
+      <canvas></canvas>
+    </div>
+    <div id="hero-blank"></div>
+    <div id="hero-info">
+      <h1>They Don&apos;t<br>Have Voices</h1>
+    </div>
+    <div id="hero-info">
+      <h1>But We Do</h1>
+    </div>
+    <div id="hero-info">
+      <h1>Let&apos;s Speak Up!</h1>
+    </div>
+    <div id="hero-blank"></div>
+    <div id="hero-message">
+      <h1>🏙️ City by City 🏙️<br>🐕 Tail by Tail 🐕<br><strong>We Care</strong></h1>
+      <h4>Be a Voice for the Voiceless. Join the movement today!</h4>
+      <div id="buttons">
+        <a href="#about-us" id="about-button">Learn More</a>
+        <a href="#volunteer" id="volunteer-button">Join the Movement</a>
+      </div>
+    </div>
+<div id="about-us">
+  <div class="container-fluid">
+    <div class="row align-items-center flex-column flex-md-row text-center text-md-start">
+      <!-- Left column: Hidden on small screens -->
+      <div class="col-md-6 left-div d-none d-md-block">
+        <img src="about.jpg" class="img-fluid rounded shadow" alt="Cute Pets">
+      </div>
+
+      <!-- Right column: About text -->
+      <div class="col-md-6 right-div p-4 p-md-5" id="about-text">
+        <h1 class="mb-4 lexend-600 fs-3 fs-md-1">About Us 🐾</h1>
+        <p class="fs-6 fs-md-5">
+          At <strong>Pet-Friendly City</strong>, we believe that kindness shouldn&apos;t stop at humans.
+          Our mission is to create safer, more compassionate urban spaces for stray animals — one city at a time.
+        </p>
+        <p class="fs-6 fs-md-5">
+          We&apos;re a youth-led movement turning empathy into action. From rescue and rehabilitation to fostering
+          and awareness drives,
+          our volunteers are the heartbeat of change on the streets. Whether it&apos;s feeding a hungry pup, helping
+          with adoptions,
+          or organizing pet-health camps — every effort counts.
+        </p>
+        <p class="fs-6 fs-md-5">
+          <strong>Our goal?</strong><br>
+          To build cities where <em>no paw is left behind</em> — where strays are not ignored, but embraced,
+          protected, and loved.
+        </p>
+        <p class="fs-6 fs-md-5">
+          Join us in making every street a little more wag-worthy.<br>
+          Because when a city becomes friendly for animals, it becomes more humane for all.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="volunteer" class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">🙌 Become a Volunteer</h2>
+      <p class="text-muted">Be the reason a paw finds hope 🐾</p>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow-sm mx-auto" style="max-width: 600px;">
+      <form>
+        <div class="mb-3">
+          <label for="volunteerName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="volunteerName" placeholder="Enter your full name">
+        </div>
+
+        <div class="mb-3">
+          <label for="volunteerCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="volunteerCity" placeholder="Where are you from?">
+        </div>
+
+        <div class="mb-3">
+          <label for="rolePreference" class="form-label">Role Preference</label>
+          <select class="form-select" id="rolePreference">
+            <option selected disabled>Select your preferred role</option>
+            <option>Feeding & Rescue</option>
+            <option>Foster & Adoption</option>
+            <option>Social Media Awareness</option>
+            <option>On-ground Events</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="volunteerEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="volunteerEmail" placeholder="example@email.com">
+        </div>
+
+        <div class="mb-3">
+          <label for="volunteerMessage" class="form-label">Why do you want to join us?</label>
+          <textarea class="form-control" id="volunteerMessage" rows="3" placeholder="Tell us what drives you..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-danger w-100">Join the Movement</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="stories" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">📖 Impact Stories</h2>
+    <p class="text-center text-muted mb-5">Real tails of love, rescue, and transformation 🐶🐾</p>
+
+    <!-- Horizontal Scrollable Container -->
+    <div class="scroll-container d-flex overflow-auto px-2 py-3 gap-4">
+
+      <!-- Story Card 1 -->
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 1">
+        <div class="card-body">
+          <p class="card-text">From street to snuggles: Bruno found his forever home 🏡</p>
+        </div>
+      </div>
+
+      <!-- Story Card 2 -->
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 2">
+        <div class="card-body">
+          <p class="card-text">Luna now leads awareness walks with her hooman 🐕‍🦺</p>
+        </div>
+      </div>
+
+      <!-- Story Card 3 -->
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 3">
+        <div class="card-body">
+          <p class="card-text">Scooby survived the odds, thanks to our rescue squad 🚑🐾</p>
+        </div>
+      </div>
+
+      <!-- Story Card 4 -->
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 4">
+        <div class="card-body">
+          <p class="card-text">Milo was adopted at our first pet-fest in Mumbai 🎉</p>
+        </div>
+      </div>
+
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 4">
+        <div class="card-body">
+          <p class="card-text">Milo was adopted at our first pet-fest in Mumbai 🎉</p>
+        </div>
+      </div>
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 4">
+        <div class="card-body">
+          <p class="card-text">Milo was adopted at our first pet-fest in Mumbai 🎉</p>
+        </div>
+      </div>
+      <div class="story-card flex-shrink-0 card" style="width: 250px;">
+        <img src="https://place-puppy.com/puppy/y:200/x:300" class="card-img-top rounded" alt="Story 4">
+        <div class="card-body">
+          <p class="card-text">Milo was adopted at our first pet-fest in Mumbai 🎉</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-4">📬 Contact Us</h2>
+    <p class="text-center text-muted mb-5">We&apos;d love to hear from you! Reach out or visit us at any of our locations. 🤝</p>
+
+    <div class="row gy-4">
+
+      <!-- Office Addresses -->
+      <div class="col-md-6">
+        <div class="bg-light p-4 rounded shadow-sm h-100">
+          <h5 class="mb-3">📍 Our Offices</h5>
+
+          <p><strong>Bhopal Office:</strong><br>
+          Third Floor, Above Bread & Better, Near Shiyoy Complex, Gulmohar, Bhopal, Madhya Pradesh 462039</p>
+
+          <p><strong>Mumbai Office:</strong><br>
+          74 Technopark, MIDC Gate no 2, Seepz, Andheri East, Mumbai, Maharashtra 400069</p>
+
+          <p><strong>Delhi Office:</strong><br>
+          1112, Surya kiran building, Connaught Place, New Delhi, 110001</p>
+
+          <p><strong>Pune Office:</strong><br>
+          First Floor, Creaticity Mall, Opposite Golf Course, Shastrinagar, Yerawada, Pune 411006</p>
+
+          <p><strong>Indore Office:</strong><br>
+          The One, RNT Marg, Indore, Madhya Pradesh 452001</p>
+
+          <p><strong>Upcoming Cities:</strong><br>
+          RAIPUR, JAIPUR, GWALIOR, AHEMEDABAD & GOA<br>HUNGARY (International Hub)</p>
+          
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="bg-light p-4 rounded shadow-sm h-100">
+          <h5 class="mb-3">📧 Send Us a Message</h5>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name 👤</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address 📧</label>
+              <input type="email" class="form-control" id="email" placeholder="example@mail.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message 💬</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- About -->
+      <div class="col-md-3">
+        <h5 class="text-uppercase mb-3">🐾 Pet-Friendly City</h5>
+        <p>
+          Building compassionate cities, one paw at a time. Join our movement to help strays live with dignity and love.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3">
+        <h6 class="text-uppercase mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#about-us" class="text-light text-decoration-none">About</a></li>
+          <li><a href="#volunteer" class="text-light text-decoration-none">Volunteer</a></li>
+          <li><a href="#stories" class="text-light text-decoration-none">Stories</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3">
+        <h6 class="text-uppercase mb-3">Follow Us</h6>
+        <ul class="list-inline">
+          <li class="list-inline-item me-2">
+            <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li class="list-inline-item me-2">
+            <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="list-inline-item me-2">
+            <a href="#" class="text-light fs-5"><i class="bi bi-twitter-x"></i></a>
+          </li>
+          <li class="list-inline-item me-2">
+            <a href="#" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3">
+        <h6 class="text-uppercase mb-3">Contact</h6>
+        <p class="mb-1"><i class="bi bi-envelope"></i> mail@collegetips.in</p>
+        <p><i class="bi bi-phone"></i> +91 7024577333</p>
+      </div>
+
+    </div>
+
+    <hr class="my-4 border-light">
+
+    <div class="text-center small">
+      &copy; 2025 Pet-Friendly City. Made with ❤️ by Suhail Khan (CollegeTips Intern).
+    </div>
+  </div>
+</footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
